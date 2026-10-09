@@ -1,4 +1,4 @@
-Sprocket Language Framework - Sprocket in another language (Thai included), for Sprocket 0.2.55.5
+Sprocket Language Framework 0.2.0 - Sprocket in another language (Thai included), for Sprocket 0.2.55.5 and 0.2.56.0
 https://github.com/Hans21223/Sprocket-Language-Framework
 
 INSTALL
@@ -12,6 +12,10 @@ In the game: Settings > General > Language, then pick ไทย (Thai). It switc
 - The game's menus, editor, settings, part names and descriptions, scenarios and driving HUD, and Quality of Life's
   text, where the language file has them. Names you type are never translated.
 - Thai letters use Windows' own Leelawadee UI font; nothing to install.
+
+SPROCKET MOD API (optional)
+With the Sprocket Mod API (github.com/furryaxw/SprocketModAPI) installed, Language is in its Mod menu (Settings >
+General > MODS) and the language can be picked there too. Without it, nothing changes.
 
 LANGUAGE FILES
 Languages\<code>.txt next to SprocketLanguage.dll (th.txt for Thai), in XUnity.AutoTranslator's text format:

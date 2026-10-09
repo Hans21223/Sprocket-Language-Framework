@@ -4,8 +4,9 @@ Play [Sprocket](https://store.steampowered.com/app/1674170/Sprocket/) in another
 Choose the language in the game: **Settings → General → Language**. It switches at once, and back to English the same
 way.
 
-For **Sprocket 0.2.55.5** with the [Sprocket Mod Loader](https://github.com/Hans21223/Sprocket-Mod-Loader)
-(BepInEx 6 IL2CPP).
+For **Sprocket 0.2.55.5 and 0.2.56.0** with the [Sprocket Mod Loader](https://github.com/Hans21223/Sprocket-Mod-Loader)
+(BepInEx 6 IL2CPP). With the optional [Sprocket Mod API](https://github.com/furryaxw/SprocketModAPI) installed, the
+language can also be picked on this mod's page in its Mod menu (Settings → General → MODS).
 
 ## ภาษาไทย
 

@@ -2,5 +2,18 @@
   <Import Project="..\SprocketMod.props" />
   <PropertyGroup>
     <AssemblyName>SprocketLanguage</AssemblyName>
+    <Version>0.2.0</Version>
   </PropertyGroup>
+  <ItemGroup>
+    <!-- Sprocket Mod API, optional at run time (ModApi.cs): compiled against the copy in lib\, never shipped with the mod. -->
+    <Reference Include="SprocketModAPI"><HintPath>..\lib\SprocketModAPI.dll</HintPath><Private>false</Private></Reference>
+    <!-- What the Mod API's Mod menu (and mod managers) show for this mod; the Id must never change. -->
+    <AssemblyMetadata Include="Sprocket.Mod.Id" Value="hans21223.language-framework" />
+    <AssemblyMetadata Include="Sprocket.Mod.DisplayName" Value="Language" />
+    <AssemblyMetadata Include="Sprocket.Mod.Description" Value="Play Sprocket in another language, Thai included: XUnity.AutoTranslator-format language files, chosen in the game's settings." />
+    <AssemblyMetadata Include="Sprocket.Mod.Authors" Value="Hans21223" />
+    <AssemblyMetadata Include="Sprocket.Mod.Repository" Value="Hans21223/Sprocket-Language-Framework" />
+    <AssemblyMetadata Include="Sprocket.Mod.Homepage" Value="https://github.com/Hans21223/Sprocket-Language-Framework" />
+    <AssemblyMetadata Include="Sprocket.Mod.License" Value="MIT" />
+  </ItemGroup>
 </Project>

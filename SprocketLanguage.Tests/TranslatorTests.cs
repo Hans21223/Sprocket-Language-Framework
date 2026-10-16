@@ -53,6 +53,15 @@ static class TranslatorTests
         }
         var thai = Translator.Parse(File.ReadAllLines(packs[0]));
         Check(thai.Translate("Mantlet") == "หน้ากากปืน" && thai.Translate("Rivets") == "หมุด", "th.txt: the words chosen for mantlet and rivets");
+        // BepInEx refuses = \ " ' [ ] newlines and tabs in setting names, and a plugin whose Bind throws doesn't load at all.
+        int names = 0;
+        foreach (var file in Directory.GetFiles(Path.Combine(Root(), "SprocketLanguage"), "*.cs", SearchOption.AllDirectories))
+            foreach (System.Text.RegularExpressions.Match bind in System.Text.RegularExpressions.Regex.Matches(File.ReadAllText(file),
+                         @"\.Bind(?:<[^>]*>)?\(\s*""((?:[^""\\]|\\.)*)""\s*,\s*""((?:[^""\\]|\\.)*)"""))
+                for (int g = 1; g <= 2; g++, names++)
+                    Check(bind.Groups[g].Value.IndexOfAny(new[] { '=', '\n', '\t', '\\', '"', '\'', '[', ']' }) < 0,
+                        $"{Path.GetFileName(file)}: the setting name '{bind.Groups[g].Value}' has a character BepInEx refuses");
+        Check(names >= 2, $"every setting name is checked ({names} found)");
         Console.WriteLine("TRANSLATOR_TESTS_OK: plain, escapes, number templates, regex, padding, shipped Thai");
     }
 }
